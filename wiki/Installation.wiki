@@ -1,0 +1,15 @@
+#summary Installation Notes
+#labels Phase-Requirements,Phase-Deploy
+
+= Introduction =
+
+Requires Kronik v2, Mascot Parser, MSToolkit
+
+
+= Details =
+
+Kronik v2 found at http://code.google.com/p/hardklor/
+
+Mascot Parser included with this project
+
+MSToolkit found at http://code.google.com/p/mstoolkit/
