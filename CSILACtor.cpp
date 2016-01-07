@@ -558,7 +558,7 @@ void CSILACtor::addReplicate(CSILACtor& c){
 
 }
 
-void CSILACtor::proteinSummary(char* out, char* target, bool bTrace){
+void CSILACtor::proteinSummary(const char* out, const char* target, bool bTrace){
   string protein;
   string peptide;
   string peptide2;
@@ -672,7 +672,7 @@ void CSILACtor::proteinSummary(char* out, char* target, bool bTrace){
     if(bTrace){
       fprintf(f2,"\n%s\t%s\n",&protein[0],&peptide[0]);
       for(j=0;j<=replicates;j++){
-        fprintf(f2,"%d\t%.0f\t%.0f\n",j,peps->at(pairs->at(i).pepIndex1).area[j],peps->at(pairs->at(i).pepIndex2).area[j]);
+        fprintf(f2,"%d\t%.0f\t%.0f\n",j,peps->at(pairs->at(i).pepIndex1).area->at(j),peps->at(pairs->at(i).pepIndex2).area->at(j));
       }
     }
 
@@ -698,7 +698,7 @@ void CSILACtor::proteinSummary(char* out, char* target, bool bTrace){
       if(bTrace){
         fprintf(f2,"\n%s\t%s\n",&protein[0],&peptide2[0]);
         for(k=0;k<=replicates;k++){
-          fprintf(f2,"%d\t%.0f\t%.0f\n",k,peps->at(pairs->at(j).pepIndex1).area[k],peps->at(pairs->at(j).pepIndex2).area[k]);
+          fprintf(f2,"%d\t%.0f\t%.0f\n",k,peps->at(pairs->at(j).pepIndex1).area->at(k),peps->at(pairs->at(j).pepIndex2).area->at(k));
         }
       }
 

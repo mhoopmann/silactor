@@ -56,7 +56,7 @@ public:
 	bool readTextPepList(char* fn);
 	void loadDB(char* fname);
   bool buildDB(int fileCount, int pepCount, float rtDrift);
-  void exportDB(char* fname);
+  void exportDB(const char* fname);
 
 protected:
 private:

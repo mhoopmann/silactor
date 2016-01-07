@@ -333,7 +333,7 @@ bool CPeptideDatabase::buildDB(int fileCount, int pepCount, float rtDrift){
   return true;
 }
 
-void CPeptideDatabase::exportDB(char* fname){
+void CPeptideDatabase::exportDB(const char* fname){
   FILE *f=fopen(fname,"wt");
   int i;
 
