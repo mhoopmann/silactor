@@ -1,4 +1,4 @@
-#include "CKronik2.h"
+#include "CKronik.h"
 #include "MascotParser.h"
 #include "CSILACtor.h"
 #include "CPeptideDatabase.h"
@@ -35,13 +35,13 @@ typedef struct sAnalysis {
   vector<
   */
 
-int binarySearch(CKronik2& p, double mass);
+int binarySearch(CKronik& p, double mass);
 bool checkSILAC(silac& s,int index);
-void matchMascot(CKronik2& p, MascotParser& mp);
-void matchMascot2(CKronik2& p, MascotParser& mp);
-void matchMascot3(CKronik2& p, CPeptideDatabase& mp, vector<uniquePep>& v);
+void matchMascot(CKronik& p, MascotParser& mp);
+void matchMascot2(CKronik& p, MascotParser& mp);
+void matchMascot3(CKronik& p, CPeptideDatabase& mp, vector<uniquePep>& v);
 bool parser(char* in);
-void SILACtor(CKronik2& p, MascotParser& mp, int index);
+void SILACtor(CKronik& p, MascotParser& mp, int index);
 void timePoint(int index);
 //vector<int> pepID;
 //vector<silac> hits;
@@ -85,7 +85,7 @@ int main(int argc, char* argv[]){
 
   //argv[1] = Hardklor output
 
-  CKronik2 p;
+  CKronik p;
   MascotParser mp;
   singleScans s;
   CPeptideDatabase d;
@@ -208,7 +208,7 @@ int main(int argc, char* argv[]){
   return 0;
 }
 
-void matchMascot2(CKronik2& p, MascotParser& mp){
+void matchMascot2(CKronik& p, MascotParser& mp){
   int i,j;
   double ppm;
   int match=0;
@@ -270,7 +270,7 @@ void matchMascot2(CKronik2& p, MascotParser& mp){
 
 }
 
-void matchMascot3(CKronik2& p, CPeptideDatabase& mp, vector<uniquePep>& v){
+void matchMascot3(CKronik& p, CPeptideDatabase& mp, vector<uniquePep>& v){
   int i,j;
   double ppm;
   int match=0;
@@ -372,7 +372,7 @@ void matchMascot3(CKronik2& p, CPeptideDatabase& mp, vector<uniquePep>& v){
 
 }
 
-int binarySearch(CKronik2& p, double mass){
+int binarySearch(CKronik& p, double mass){
 	int lower,mid,upper;
 	int sz=p.size();
 	double lowMass=mass-(mass/1000000*dbMatchTolerance);

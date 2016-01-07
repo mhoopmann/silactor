@@ -1,6 +1,6 @@
 #pragma once
 
-#include "CKronik2.h"
+#include "CKronik.h"
 
 using namespace std;
 
@@ -205,7 +205,7 @@ public:
 
   //Analysis Functions
   void addReplicate(CSILACtor& c);
-  void analyze(CKronik2& kro, float minRT, float maxRT, vector<uniquePep>& v);
+  void analyze(CKronik& kro, float minRT, float maxRT, vector<uniquePep>& v);
   void proteinSummary(char* out, char* target, bool bTrace=false);
 
   vector<singlet>* peps;

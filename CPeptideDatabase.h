@@ -7,6 +7,7 @@
 #include <cmath>
 
 using namespace std;
+using namespace MSToolkit;
 
 typedef struct sDBEntry{
   string strName;

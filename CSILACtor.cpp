@@ -93,7 +93,7 @@ void CSILACtor::setCorrThreshold(double d){
 //-------------------------------------
 //   Analysis Functions
 //-------------------------------------
-void CSILACtor::analyze(CKronik2& kro, float minRT, float maxRT, vector<uniquePep>& v){
+void CSILACtor::analyze(CKronik& kro, float minRT, float maxRT, vector<uniquePep>& v){
 
   unsigned int i;
 	int j,k;
