@@ -47,7 +47,7 @@ public:
   void clear();
   void clearMascot();
   void clearPeps();
-  unsigned int size();
+  size_t size();
 
   //Analysis functions
   void addPeptide(char* pep, char* prot, float firstRT, float lastRT, int charge, double monoMass);

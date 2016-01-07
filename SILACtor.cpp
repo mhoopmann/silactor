@@ -374,7 +374,7 @@ void matchMascot3(CKronik& p, CPeptideDatabase& mp, vector<uniquePep>& v){
 
 int binarySearch(CKronik& p, double mass){
 	int lower,mid,upper;
-	int sz=p.size();
+	int sz=(int)p.size();
 	double lowMass=mass-(mass/1000000*dbMatchTolerance);
 	double highMass=mass+(mass/1000000*dbMatchTolerance);
 
@@ -824,7 +824,7 @@ void timePoint(int index){
           sumxy+=(xVal[n]*yVal[n]);
           sumxx+=(xVal[n]*xVal[n]);
         }
-        n=xVal.size();
+        n=(int)xVal.size();
         avgx=sumx/n;
         avgy=sumy/n;
 

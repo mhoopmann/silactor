@@ -35,7 +35,7 @@ void CPeptideDatabase::clearPeps(){
   peps.clear();
 }
 
-unsigned int CPeptideDatabase::size(){
+size_t CPeptideDatabase::size(){
   return peps.size();
 }
 
